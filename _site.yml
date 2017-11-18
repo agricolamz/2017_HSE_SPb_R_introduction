@@ -1,0 +1,8 @@
+name: ""
+navbar: 
+  left:
+    - text: "1. Введение в R и визуализация"
+      href: 1_R_basics_visualisation.html
+    - text: "2. Критерии согласия"
+      href: 2_agreement.html
+output_dir: docs

@@ -1,0 +1,17 @@
+---
+title: "Анализ Данных для лингвистов"
+author: "Г. Мороз"
+output:
+  html_document:
+    toc: false
+---
+
+1. Введение в R. Визуализация с ggplot2
+2. Критерии согласия
+
+### Библиотеки:
+```{r, message=FALSE}
+packageVersion("tidyverse")
+packageVersion("irr")
+```
+
