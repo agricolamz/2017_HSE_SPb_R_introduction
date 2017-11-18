@@ -1,4 +1,2 @@
-[Курс "Анализ данных для лингвистов"](https://agricolamz.github.io/2018_data_analysis_for_linguists/index.html)
-
-2017-2018 учебный год
+[Курс "Введение в  R", 2017, НИУ ВШЭ СПб](https://agricolamz.github.io/2017_HSE_SPb_R_introduction/)
 
