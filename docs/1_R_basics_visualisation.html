@@ -28,6 +28,49 @@
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
 
 
 <style type="text/css">
@@ -280,7 +323,7 @@ div.tocify {
 
 
 <h1 class="title toc-ignore"><ol style="list-style-type: decimal">
-<li>Биномиальные данные</li>
+<li>Введение в R и визуализация данных</li>
 </ol></h1>
 <h4 class="author"><em>Г. Мороз</em></h4>
 
@@ -290,7 +333,7 @@ div.tocify {
 <style>
 .parallax {
     /* The image used */
-    background-image: url("1_coin.jpg");
+    background-image: url("1_logo.jpg");
 
     /* Set a specific height */
     min-height: 350px; 
@@ -305,8 +348,82 @@ div.tocify {
 <div class="parallax">
 
 </div>
+<div id="-r" class="section level2">
+<h2>1. Основы R</h2>
+<div id="-" class="section level3">
+<h3>1.1 Базовые элементы</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">9L <span class="co"># целое число</span></code></pre></div>
+<pre><code>## [1] 9</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">-<span class="fl">3.47</span> <span class="co"># рациональные числа</span></code></pre></div>
+<pre><code>## [1] -3.47</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">5</span>+2i <span class="co"># мнимое число</span></code></pre></div>
+<pre><code>## [1] 5+2i</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="st">&quot;Санкт-Петербург&quot;</span> <span class="co"># строка</span></code></pre></div>
+<pre><code>## [1] &quot;Санкт-Петербург&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="ot">TRUE</span> <span class="co"># логическое значение</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="ot">FALSE</span> <span class="co"># логическое значение</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pi <span class="co"># число π</span></code></pre></div>
+<pre><code>## [1] 3.141593</code></pre>
+</div>
 <div class="section level3">
-<h3>1. Введение</h3>
+<h3>1.2 Калкулятор</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">2+2</span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">9</span><span class="fl">-4.5</span></code></pre></div>
+<pre><code>## [1] 4.5</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">117</span>*<span class="dv">2</span></code></pre></div>
+<pre><code>## [1] 234</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">234</span>/<span class="dv">2</span></code></pre></div>
+<pre><code>## [1] 117</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">5</span>^<span class="dv">7</span></code></pre></div>
+<pre><code>## [1] 78125</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">5</span>**<span class="dv">7</span></code></pre></div>
+<pre><code>## [1] 78125</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">25</span>^<span class="fl">0.5</span></code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sin</span>(pi/<span class="dv">2</span>)</code></pre></div>
+<pre><code>## [1] 1</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cos</span>(pi)</code></pre></div>
+<pre><code>## [1] -1</code></pre>
+</div>
+<div id="---" class="section level3">
+<h3>1.3 Векторы и его индексация</h3>
+<div class="parallax">
+
+</div>
+</div>
+<div id="---" class="section level3">
+<h3>1.4 Функции и описательные статистики</h3>
+<div class="parallax">
+
+</div>
+</div>
+<div id="---" class="section level3">
+<h3>1.5 Датафрейм и его индексация</h3>
+<div class="parallax">
+
+</div>
+</div>
+<div id="---r" class="section level3">
+<h3>1.6 Считывание файлов в R</h3>
+<div class="parallax">
+
+</div>
+</div>
+<div id="--" class="section level3">
+<h3>1.7 Работа с пакетами</h3>
+<div class="parallax">
+
+</div>
+</div>
+</div>
+<div id="--r-ggplot2" class="section level2">
+<h2>2. Визуализация в R: <code>ggplot2</code></h2>
+<div class="parallax">
+
+</div>
 </div>
 
 
