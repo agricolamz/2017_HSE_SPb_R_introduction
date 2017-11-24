@@ -1,6 +1,6 @@
 ---
 title: "1. Введение в R и визуализация данных"
-author: "Г. Мороз <br> Презентация доступна по ссылке: https://goo.gl/LnmgVw"
+author: "Г. Мороз <br> Презентация доступна по ссылке: https://goo.gl/78y9br"
 ---
 
 ```{r setup, include=FALSE}

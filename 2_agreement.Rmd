@@ -1,6 +1,6 @@
 ---
 title: "2. Меры согласия"
-author: "Г. Мороз"
+author: "Г. Мороз <br> Презентация доступна по ссылке: https://goo.gl/mdkzaT"
 ---
 
 ```{r setup, include=FALSE}
