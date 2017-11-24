@@ -9,7 +9,7 @@
 <meta name="generator" content="pandoc" />
 
 
-<meta name="author" content="Г. Мороз" />
+<meta name="author" content="Г. Мороз   Презентация доступна по ссылке: https://goo.gl/LnmgVw" />
 
 
 <title></title>
@@ -325,7 +325,7 @@ div.tocify {
 <h1 class="title toc-ignore"><ol style="list-style-type: decimal">
 <li>Введение в R и визуализация данных</li>
 </ol></h1>
-<h4 class="author"><em>Г. Мороз</em></h4>
+<h4 class="author"><em>Г. Мороз <br> Презентация доступна по ссылке: <a href="https://goo.gl/LnmgVw" class="uri">https://goo.gl/LnmgVw</a></em></h4>
 
 </div>
 
@@ -348,6 +348,22 @@ div.tocify {
 <div class="parallax">
 
 </div>
+<div id="--r--rstudio" class="section level2">
+<h2>0. Как добыть R и Rstudio</h2>
+<p>Бесплатное программное обеспечение:</p>
+<ul>
+<li>R</li>
+<li>RStudio</li>
+<li>Если не хочется ставить сторонние программы:
+<ul>
+<li><a href="https://rstudio.cloud/">RStudio Cloud</a></li>
+<li><a href="https://www.rollapp.com/app/rstudio">rollApp</a></li>
+</ul></li>
+</ul>
+<div class="parallax">
+
+</div>
+</div>
 <div id="-r" class="section level2">
 <h2>1. Основы R</h2>
 <div id="-" class="section level3">
@@ -366,6 +382,9 @@ div.tocify {
 <pre><code>## [1] FALSE</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pi <span class="co"># число π</span></code></pre></div>
 <pre><code>## [1] 3.141593</code></pre>
+<div class="parallax">
+
+</div>
 </div>
 <div class="section level3">
 <h3>1.2 Калкулятор</h3>
@@ -383,37 +402,167 @@ div.tocify {
 <pre><code>## [1] 78125</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">25</span>^<span class="fl">0.5</span></code></pre></div>
 <pre><code>## [1] 5</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">25</span>^(<span class="dv">1</span>/<span class="dv">2</span>) <span class="co"># скобки!</span></code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">25</span>^<span class="dv">1</span>/<span class="dv">2</span> <span class="co"># скобки!</span></code></pre></div>
+<pre><code>## [1] 12.5</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">55</span>%%<span class="dv">3</span> <span class="co"># остаток от деления</span></code></pre></div>
+<pre><code>## [1] 1</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sin</span>(pi/<span class="dv">2</span>)</code></pre></div>
 <pre><code>## [1] 1</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cos</span>(pi)</code></pre></div>
 <pre><code>## [1] -1</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(<span class="dv">34</span>, <span class="dv">23</span>, <span class="dv">14</span>)</code></pre></div>
+<pre><code>## [1] 71</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">prod</span>(<span class="dv">34</span>, <span class="dv">23</span>, <span class="dv">14</span>)</code></pre></div>
+<pre><code>## [1] 10948</code></pre>
+<div class="parallax">
+
+</div>
 </div>
 <div id="---" class="section level3">
 <h3>1.3 Векторы и его индексация</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">2</span>:<span class="dv">9</span></code></pre></div>
+<pre><code>## [1] 2 3 4 5 6 7 8 9</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">33</span>:<span class="dv">25</span></code></pre></div>
+<pre><code>## [1] 33 32 31 30 29 28 27 26 25</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">-<span class="dv">5</span>:-<span class="dv">3</span></code></pre></div>
+<pre><code>## [1] -5 -4 -3</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">3</span>)</code></pre></div>
+<pre><code>## [1] 1 5 8 3</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rep</span>(<span class="kw">c</span>(<span class="dv">8</span>, <span class="dv">2</span>), <span class="dv">4</span>)</code></pre></div>
+<pre><code>## [1] 8 2 8 2 8 2 8 2</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rep</span>(<span class="kw">c</span>(<span class="dv">8</span>, <span class="dv">2</span>), <span class="dt">each =</span> <span class="dv">4</span>)</code></pre></div>
+<pre><code>## [1] 8 8 8 8 2 2 2 2</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>, <span class="ot">TRUE</span>)[<span class="dv">4</span>]</code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">c</span>(<span class="st">&quot;alpha&quot;</span>, <span class="st">&quot;beta&quot;</span>, <span class="st">&quot;gamma&quot;</span>)[<span class="dv">2</span>:<span class="dv">3</span>]</code></pre></div>
+<pre><code>## [1] &quot;beta&quot;  &quot;gamma&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">c</span>(<span class="st">&quot;alpha&quot;</span>, <span class="st">&quot;beta&quot;</span>, <span class="st">&quot;gamma&quot;</span>)[-<span class="dv">3</span>]</code></pre></div>
+<pre><code>## [1] &quot;alpha&quot; &quot;beta&quot;</code></pre>
+<blockquote>
+<p><img src="think.png" /> (1) Прибавьте к вектору <code>1:5</code> <code>4</code> <br> <img src="think2.png" /> (2) Посчитайте <span class="math display">\[\frac{\sum_{i=1}^{100}4 \times i^2}{1250}\]</span></p>
+</blockquote>
+<div class="parallax">
+
+</div>
+</div>
+<div class="section level3">
+<h3>1.4 Переменные</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a &lt;-<span class="st"> </span><span class="dv">5</span>:<span class="dv">24</span> <span class="co"># Сочетание Alt - ставит стрелочку</span>
+a[<span class="dv">3</span>]</code></pre></div>
+<pre><code>## [1] 7</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a &lt;-<span class="st"> </span>a +<span class="st"> </span><span class="dv">3</span>
+a[<span class="dv">3</span>]</code></pre></div>
+<pre><code>## [1] 10</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">23</span> -&gt;<span class="st"> </span>a
+a</code></pre></div>
+<pre><code>## [1] 23</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">letters</code></pre></div>
+<pre><code>##  [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot; &quot;f&quot; &quot;g&quot; &quot;h&quot; &quot;i&quot; &quot;j&quot; &quot;k&quot; &quot;l&quot; &quot;m&quot; &quot;n&quot; &quot;o&quot; &quot;p&quot; &quot;q&quot;
+## [18] &quot;r&quot; &quot;s&quot; &quot;t&quot; &quot;u&quot; &quot;v&quot; &quot;w&quot; &quot;x&quot; &quot;y&quot; &quot;z&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">LETTERS</code></pre></div>
+<pre><code>##  [1] &quot;A&quot; &quot;B&quot; &quot;C&quot; &quot;D&quot; &quot;E&quot; &quot;F&quot; &quot;G&quot; &quot;H&quot; &quot;I&quot; &quot;J&quot; &quot;K&quot; &quot;L&quot; &quot;M&quot; &quot;N&quot; &quot;O&quot; &quot;P&quot; &quot;Q&quot;
+## [18] &quot;R&quot; &quot;S&quot; &quot;T&quot; &quot;U&quot; &quot;V&quot; &quot;W&quot; &quot;X&quot; &quot;Y&quot; &quot;Z&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a ==<span class="st"> </span><span class="dv">23</span> <span class="co"># равно?</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a !=<span class="st"> </span><span class="dv">28</span> <span class="co"># не равно?</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">b &lt;-<span class="st"> </span><span class="dv">1</span>:<span class="dv">30</span>
+b[b %%<span class="st"> </span><span class="dv">3</span> ==<span class="st"> </span><span class="dv">0</span>] <span class="co"># индекс принимает условие!</span></code></pre></div>
+<pre><code>##  [1]  3  6  9 12 15 18 21 24 27 30</code></pre>
+<blockquote>
+<p><img src="think.png" /> (3) Сколько чисел от 1 до 1000 делится на 13?</p>
+</blockquote>
 <div class="parallax">
 
 </div>
 </div>
 <div id="---" class="section level3">
-<h3>1.4 Функции и описательные статистики</h3>
+<h3>1.5 Функции и описательные статистики</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">height &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="fl">1.7</span>, <span class="fl">1.8</span>, <span class="fl">1.74</span>, <span class="fl">1.56</span>, <span class="fl">1.66</span>, <span class="fl">1.68</span>, <span class="fl">1.77</span>, <span class="fl">1.76</span>, <span class="dv">6</span>)
+<span class="kw">mean</span>(height)</code></pre></div>
+<pre><code>## [1] 2.067</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(height, <span class="dt">trim =</span> <span class="fl">0.1</span>)</code></pre></div>
+<pre><code>## [1] 1.70875</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">weighted.mean</span>(height, <span class="dt">w =</span> <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>))</code></pre></div>
+<pre><code>## [1] 1.95</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">range</span>(height)</code></pre></div>
+<pre><code>## [1] 1 6</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">max</span>(height)</code></pre></div>
+<pre><code>## [1] 6</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">min</span>(height)</code></pre></div>
+<pre><code>## [1] 1</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sd</span>(height)</code></pre></div>
+<pre><code>## [1] 1.401381</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">median</span>(height)</code></pre></div>
+<pre><code>## [1] 1.72</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">quantile</span>(height)</code></pre></div>
+<pre><code>##     0%    25%    50%    75%   100% 
+## 1.0000 1.6650 1.7200 1.7675 6.0000</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">quantile</span>(height, <span class="dt">probs =</span> <span class="kw">c</span>(<span class="fl">0.1</span>, <span class="fl">0.2</span>))</code></pre></div>
+<pre><code>##   10%   20% 
+## 1.504 1.640</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">IQR</span>(height) <span class="co"># разность 3ей и 2ой квартилей</span></code></pre></div>
+<pre><code>## [1] 0.1025</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(height)</code></pre></div>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   1.000   1.665   1.720   2.067   1.768   6.000</code></pre>
 <div class="parallax">
 
 </div>
 </div>
 <div id="---" class="section level3">
-<h3>1.5 Датафрейм и его индексация</h3>
+<h3>1.6 Датафрейм и его индексация</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">name =</span> <span class="kw">c</span>(<span class="st">&quot;GM&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>, <span class="st">&quot;f&quot;</span>),
+           <span class="dt">height =</span> <span class="kw">c</span>(<span class="fl">1.76</span>, <span class="fl">1.56</span>, <span class="fl">1.45</span>, <span class="fl">1.94</span>, <span class="fl">1.81</span>),
+           <span class="dt">brown_hair =</span> <span class="kw">c</span>(<span class="ot">FALSE</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>, <span class="ot">TRUE</span>, <span class="ot">TRUE</span>))
+df</code></pre></div>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["name"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["height"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["brown_hair"],"name":[3],"type":["lgl"],"align":["right"]}],"data":[{"1":"GM","2":"1.76","3":"FALSE"},{"1":"b","2":"1.56","3":"TRUE"},{"1":"c","2":"1.45","3":"FALSE"},{"1":"d","2":"1.94","3":"TRUE"},{"1":"f","2":"1.81","3":"TRUE"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(df)</code></pre></div>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["name"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["height"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["brown_hair"],"name":[3],"type":["lgl"],"align":["right"]}],"data":[{"1":"GM","2":"1.76","3":"FALSE","_rn_":"1"},{"1":"b","2":"1.56","3":"TRUE","_rn_":"2"},{"1":"c","2":"1.45","3":"FALSE","_rn_":"3"},{"1":"d","2":"1.94","3":"TRUE","_rn_":"4"},{"1":"f","2":"1.81","3":"TRUE","_rn_":"5"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tail</span>(df)</code></pre></div>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["name"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["height"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["brown_hair"],"name":[3],"type":["lgl"],"align":["right"]}],"data":[{"1":"GM","2":"1.76","3":"FALSE","_rn_":"1"},{"1":"b","2":"1.56","3":"TRUE","_rn_":"2"},{"1":"c","2":"1.45","3":"FALSE","_rn_":"3"},{"1":"d","2":"1.94","3":"TRUE","_rn_":"4"},{"1":"f","2":"1.81","3":"TRUE","_rn_":"5"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(df)</code></pre></div>
+<pre><code>##  name       height      brown_hair     
+##  b :1   Min.   :1.450   Mode :logical  
+##  c :1   1st Qu.:1.560   FALSE:2        
+##  d :1   Median :1.760   TRUE :3        
+##  f :1   Mean   :1.704                  
+##  GM:1   3rd Qu.:1.810                  
+##         Max.   :1.940</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df[<span class="dv">1</span>,]</code></pre></div>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["name"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["height"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["brown_hair"],"name":[3],"type":["lgl"],"align":["right"]}],"data":[{"1":"GM","2":"1.76","3":"FALSE","_rn_":"1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df[,<span class="dv">2</span>]</code></pre></div>
+<pre><code>## [1] 1.76 1.56 1.45 1.94 1.81</code></pre>
 <div class="parallax">
 
 </div>
 </div>
 <div id="---r" class="section level3">
-<h3>1.6 Считывание файлов в R</h3>
+<h3>1.7 Считывание файлов в R</h3>
 <div class="parallax">
 
 </div>
 </div>
 <div id="--" class="section level3">
-<h3>1.7 Работа с пакетами</h3>
+<h3>1.8 Работа с пакетами</h3>
 <div class="parallax">
 
 </div>

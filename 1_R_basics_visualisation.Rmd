@@ -1,6 +1,6 @@
 ---
 title: "1. Введение в R и визуализация данных"
-author: "Г. Мороз"
+author: "Г. Мороз <br> Презентация доступна по ссылке: https://goo.gl/LnmgVw"
 ---
 
 ```{r setup, include=FALSE}
@@ -25,6 +25,17 @@ knitr::opts_chunk$set(message = FALSE, warning = FALSE)
 
 <div class="parallax"></div>
 
+## 0. Как добыть R и Rstudio
+
+Бесплатное программное обеспечение:
+
+* R
+* RStudio
+* Если не хочется ставить сторонние программы:
+    * [RStudio Cloud](https://rstudio.cloud/)
+    * [rollApp](https://www.rollapp.com/app/rstudio)
+
+<div class="parallax"></div>
 
 ## 1. Основы R
 ### 1.1 Базовые элементы
@@ -38,6 +49,8 @@ FALSE # логическое значение
 pi # число π
 ```
 
+<div class="parallax"></div>
+
 ### 1.2 Калкулятор
 ```{r}
 2+2
@@ -47,27 +60,98 @@ pi # число π
 5^7
 5**7
 25^0.5
+25^(1/2) # скобки!
+25^1/2 # скобки!
+55%%3 # остаток от деления
 sin(pi/2)
 cos(pi)
+sum(34, 23, 14)
+prod(34, 23, 14)
 ```
 
+<div class="parallax"></div>
+
 ### 1.3 Векторы и его индексация
+```{r}
+2:9
+33:25
+-5:-3
+c(1,5,8,3)
+rep(c(8, 2), 4)
+rep(c(8, 2), each = 4)
+c(TRUE, TRUE, FALSE, TRUE)[4]
+c("alpha", "beta", "gamma")[2:3]
+c("alpha", "beta", "gamma")[-3]
+```
+
+> ![](think.png) (1) Прибавьте к вектору `1:5` `4` <br>
+> ![](think2.png) (2) Посчитайте $$\frac{\sum_{i=1}^{100}4 \times i^2}{1250}$$
 
 <div class="parallax"></div>
 
-### 1.4 Функции и описательные статистики
+### 1.4 Переменные
+```{r}
+a <- 5:24 # Сочетание Alt - ставит стрелочку
+a[3]
+a <- a + 3
+a[3]
+23 -> a
+a
+letters
+LETTERS
+
+a == 23 # равно?
+a != 28 # не равно?
+
+b <- 1:30
+b[b %% 3 == 0] # индекс принимает условие!
+```
+
+> ![](think.png) (3) Сколько чисел от 1 до 1000 делится на 13?
+
 
 <div class="parallax"></div>
 
-### 1.5 Датафрейм и его индексация
+### 1.5 Функции и описательные статистики
+```{r}
+height <- c(1, 1.7, 1.8, 1.74, 1.56, 1.66, 1.68, 1.77, 1.76, 6)
+mean(height)
+mean(height, trim = 0.1)
+weighted.mean(height, w = c(1,2,2,2,1,2,2,1,1,1))
+range(height)
+max(height)
+min(height)
+sd(height)
+median(height)
+quantile(height)
+quantile(height, probs = c(0.1, 0.2))
+IQR(height) # разность 3ей и 2ой квартилей
+summary(height)
+```
 
 <div class="parallax"></div>
 
-### 1.6 Считывание файлов в R
+### 1.6 Датафрейм и его индексация
+```{r}
+df <- data.frame(name = c("GM", "b", "c", "d", "f"),
+           height = c(1.76, 1.56, 1.45, 1.94, 1.81),
+           brown_hair = c(FALSE, TRUE, FALSE, TRUE, TRUE))
+df
+head(df)
+tail(df)
+summary(df)
+df[1,]
+df[,2]
+```
+
 
 <div class="parallax"></div>
 
-### 1.7 Работа с пакетами
+### 1.7 Считывание файлов в R
+
+<div class="parallax"></div>
+
+### 1.8 Работа с пакетами
 
 <div class="parallax"></div>
 
