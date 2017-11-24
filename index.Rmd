@@ -11,7 +11,8 @@ output:
 
 ### Библиотеки:
 ```{r, message=FALSE}
-packageVersion("tidyverse")
+packageVersion("ggplot2")
+packageVersion("ggjoy")
 packageVersion("irr")
 ```
 
