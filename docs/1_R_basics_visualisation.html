@@ -517,39 +517,39 @@ b[b %%<span class="st"> </span><span class="dv">3</span> ==<span class="st"> </s
 </div>
 <div id="---" class="section level3">
 <h3>1.6 Датафрейм и его индексация</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">name =</span> <span class="kw">c</span>(<span class="st">&quot;GM&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>, <span class="st">&quot;f&quot;</span>),
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">name =</span> <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>, <span class="st">&quot;f&quot;</span>),
            <span class="dt">height =</span> <span class="kw">c</span>(<span class="fl">1.76</span>, <span class="fl">1.56</span>, <span class="fl">1.45</span>, <span class="fl">1.94</span>, <span class="fl">1.81</span>),
            <span class="dt">brown_hair =</span> <span class="kw">c</span>(<span class="ot">FALSE</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>, <span class="ot">TRUE</span>, <span class="ot">TRUE</span>))
 df</code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["name"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["height"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["brown_hair"],"name":[3],"type":["lgl"],"align":["right"]}],"data":[{"1":"GM","2":"1.76","3":"FALSE"},{"1":"b","2":"1.56","3":"TRUE"},{"1":"c","2":"1.45","3":"FALSE"},{"1":"d","2":"1.94","3":"TRUE"},{"1":"f","2":"1.81","3":"TRUE"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["name"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["height"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["brown_hair"],"name":[3],"type":["lgl"],"align":["right"]}],"data":[{"1":"a","2":"1.76","3":"FALSE"},{"1":"b","2":"1.56","3":"TRUE"},{"1":"c","2":"1.45","3":"FALSE"},{"1":"d","2":"1.94","3":"TRUE"},{"1":"f","2":"1.81","3":"TRUE"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(df)</code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["name"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["height"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["brown_hair"],"name":[3],"type":["lgl"],"align":["right"]}],"data":[{"1":"GM","2":"1.76","3":"FALSE","_rn_":"1"},{"1":"b","2":"1.56","3":"TRUE","_rn_":"2"},{"1":"c","2":"1.45","3":"FALSE","_rn_":"3"},{"1":"d","2":"1.94","3":"TRUE","_rn_":"4"},{"1":"f","2":"1.81","3":"TRUE","_rn_":"5"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["name"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["height"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["brown_hair"],"name":[3],"type":["lgl"],"align":["right"]}],"data":[{"1":"a","2":"1.76","3":"FALSE","_rn_":"1"},{"1":"b","2":"1.56","3":"TRUE","_rn_":"2"},{"1":"c","2":"1.45","3":"FALSE","_rn_":"3"},{"1":"d","2":"1.94","3":"TRUE","_rn_":"4"},{"1":"f","2":"1.81","3":"TRUE","_rn_":"5"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tail</span>(df)</code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["name"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["height"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["brown_hair"],"name":[3],"type":["lgl"],"align":["right"]}],"data":[{"1":"GM","2":"1.76","3":"FALSE","_rn_":"1"},{"1":"b","2":"1.56","3":"TRUE","_rn_":"2"},{"1":"c","2":"1.45","3":"FALSE","_rn_":"3"},{"1":"d","2":"1.94","3":"TRUE","_rn_":"4"},{"1":"f","2":"1.81","3":"TRUE","_rn_":"5"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["name"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["height"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["brown_hair"],"name":[3],"type":["lgl"],"align":["right"]}],"data":[{"1":"a","2":"1.76","3":"FALSE","_rn_":"1"},{"1":"b","2":"1.56","3":"TRUE","_rn_":"2"},{"1":"c","2":"1.45","3":"FALSE","_rn_":"3"},{"1":"d","2":"1.94","3":"TRUE","_rn_":"4"},{"1":"f","2":"1.81","3":"TRUE","_rn_":"5"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(df)</code></pre></div>
-<pre><code>##  name       height      brown_hair     
-##  b :1   Min.   :1.450   Mode :logical  
-##  c :1   1st Qu.:1.560   FALSE:2        
-##  d :1   Median :1.760   TRUE :3        
-##  f :1   Mean   :1.704                  
-##  GM:1   3rd Qu.:1.810                  
-##         Max.   :1.940</code></pre>
+<pre><code>##  name      height      brown_hair     
+##  a:1   Min.   :1.450   Mode :logical  
+##  b:1   1st Qu.:1.560   FALSE:2        
+##  c:1   Median :1.760   TRUE :3        
+##  d:1   Mean   :1.704                  
+##  f:1   3rd Qu.:1.810                  
+##        Max.   :1.940</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df[<span class="dv">1</span>,]</code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["name"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["height"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["brown_hair"],"name":[3],"type":["lgl"],"align":["right"]}],"data":[{"1":"GM","2":"1.76","3":"FALSE","_rn_":"1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["name"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["height"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["brown_hair"],"name":[3],"type":["lgl"],"align":["right"]}],"data":[{"1":"a","2":"1.76","3":"FALSE","_rn_":"1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df[,<span class="dv">2</span>]</code></pre></div>
@@ -615,7 +615,7 @@ df &lt;-<span class="st"> </span><span class="kw">read.table</span>(..., <span c
 </div>
 <div id="data" class="section level3">
 <h3>2.2 Data</h3>
-<p>Дальше все примеры будут приводится на основании результатов работы <a href="http://goo.gl/MKfSc6">Chi-kuk 2007</a>. В эксперименте проверялась связь акустических мер и результатов перцептивного восприятия сексуальной ориентации. Носителей кантонского диалекта китайского языка попросили послушать записи носителей кантонского диалекта и оценить ориентацию тех, кого они слушали. В датасете 14 носителей и следующие параметры:</p>
+<p>Дальше все примеры будут приводится на основании результатов работы <a href="http://goo.gl/MKfSc6">Chi-kuk 2007</a>. В эксперименте проверялась связь акустических мер и результатов перцептивного восприятия сексуальной ориентации. Носителей кантонского диалекта китайского языка попросили послушать записи носителей кантонского диалекта и оценить ориентацию тех, кого они слушали. В датасете 14 носителей и следующие переменные:</p>
 <ul>
 <li>длительность [s] (<em>s.duration.ms</em>)</li>
 <li>длительность гласного (<em>vowel.duration.ms</em>)</li>
@@ -634,6 +634,21 @@ homo</code></pre></div>
 {"columns":[{"label":["speaker"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["s.duration.ms"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["vowel.duration.ms"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["average.f0.Hz"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["f0.range.Hz"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["perceived.as.homo"],"name":[6],"type":["int"],"align":["right"]},{"label":["perceived.as.hetero"],"name":[7],"type":["int"],"align":["right"]},{"label":["perceived.as.homo.percent"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["orientation"],"name":[9],"type":["fctr"],"align":["left"]},{"label":["age"],"name":[10],"type":["int"],"align":["right"]}],"data":[{"1":"A","2":"61.40","3":"112.60","4":"119.51","5":"52.5","6":"7","7":"18","8":"0.28","9":"hetero","10":"30"},{"1":"B","2":"63.90","3":"126.49","4":"100.29","5":"114.0","6":"20","7":"5","8":"0.80","9":"hetero","10":"19"},{"1":"C","2":"55.08","3":"126.81","4":"114.90","5":"103.2","6":"9","7":"16","8":"0.36","9":"homo","10":"29"},{"1":"D","2":"78.11","3":"119.17","4":"126.61","5":"58.8","6":"15","7":"10","8":"0.60","9":"homo","10":"36"},{"1":"E","2":"64.71","3":"93.68","4":"130.76","5":"37.4","6":"10","7":"15","8":"0.40","9":"homo","10":"27"},{"1":"F","2":"67.00","3":"127.87","4":"150.79","5":"42.0","6":"17","7":"8","8":"0.68","9":"homo","10":"33"},{"1":"G","2":"65.39","3":"147.52","4":"128.96","5":"118.2","6":"20","7":"5","8":"0.80","9":"hetero","10":"28"},{"1":"H","2":"62.46","3":"120.13","4":"105.26","5":"55.7","6":"21","7":"4","8":"0.84","9":"hetero","10":"22"},{"1":"I","2":"60.45","3":"140.44","4":"109.86","5":"96.4","6":"20","7":"5","8":"0.80","9":"homo","10":"22"},{"1":"J","2":"59.59","3":"121.01","4":"123.90","5":"111.7","6":"8","7":"17","8":"0.32","9":"homo","10":"40"},{"1":"K","2":"62.94","3":"137.37","4":"119.48","5":"87.6","6":"21","7":"4","8":"0.84","9":"homo","10":"30"},{"1":"L","2":"53.31","3":"112.05","4":"146.20","5":"57.8","6":"8","7":"17","8":"0.32","9":"hetero","10":"25"},{"1":"M","2":"45.13","3":"133.74","4":"155.34","5":"100.5","6":"9","7":"16","8":"0.36","9":"hetero","10":"20"},{"1":"N","2":"57.67","3":"118.02","4":"121.48","5":"37.4","6":"4","7":"21","8":"0.16","9":"hetero","10":"29"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
+<p>Предлагаю пробовать повторять все примеры с другим датасетом, представленным М. Даниэлем. Это данные из интервью с носителями одного из северных диалектов селения Устья. В датасете 62 носителя и следующие переменные:</p>
+<ul>
+<li>год рождения (<em>year</em>)</li>
+<li>пол (<em>gender</em>)</li>
+<li>количество консервативных употреблений (<em>cons</em>)</li>
+<li>количество инновационных употреблений (<em>inn</em>)</li>
+<li>количество всех употреблений (<em>total</em>)</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ustya &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://goo.gl/CP5wPG&quot;</span>, <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)
+ustya</code></pre></div>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["speaker"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["year"],"name":[2],"type":["int"],"align":["right"]},{"label":["gender"],"name":[3],"type":["fctr"],"align":["left"]},{"label":["cons"],"name":[4],"type":["int"],"align":["right"]},{"label":["inn"],"name":[5],"type":["int"],"align":["right"]},{"label":["total"],"name":[6],"type":["int"],"align":["right"]}],"data":[{"1":"ait1954","2":"1954","3":"f","4":"222","5":"254","6":"476"},{"1":"anp1929","2":"1929","3":"m","4":"15","5":"16","6":"31"},{"1":"ans1925","2":"1925","3":"f","4":"788","5":"379","6":"1167"},{"1":"avch1930","2":"1930","3":"f","4":"43","5":"6","6":"49"},{"1":"avi1958","2":"1958","3":"f","4":"1","5":"31","6":"32"},{"1":"avm1922","2":"1922","3":"f","4":"778","5":"235","6":"1013"},{"1":"avt1928","2":"1928","3":"f","4":"121","5":"162","6":"283"},{"1":"egp1928","2":"1928","3":"f","4":"525","5":"428","6":"953"},{"1":"ent1968","2":"1968","3":"f","4":"4","5":"296","6":"300"},{"1":"epl1926","2":"1926","3":"f","4":"55","5":"1","6":"56"},{"1":"eve1950","2":"1950","3":"f","4":"44","5":"49","6":"93"},{"1":"fdl1954","2":"1954","3":"m","4":"0","5":"3","6":"3"},{"1":"ffp1952","2":"1952","3":"m","4":"94","5":"136","6":"230"},{"1":"gbs1951","2":"1951","3":"f","4":"0","5":"14","6":"14"},{"1":"gvp1949","2":"1949","3":"f","4":"144","5":"236","6":"380"},{"1":"iip1951","2":"1951","3":"m","4":"182","5":"216","6":"398"},{"1":"iit1991","2":"1991","3":"f","4":"0","5":"2","6":"2"},{"1":"ipm1956","2":"1956","3":"m","4":"132","5":"186","6":"318"},{"1":"juap1969","2":"1969","3":"m","4":"21","5":"77","6":"98"},{"1":"kip1931","2":"1931","3":"f","4":"13","5":"5","6":"18"},{"1":"lgp1947","2":"1947","3":"f","4":"333","5":"702","6":"1035"},{"1":"ljap1953","2":"1953","3":"f","4":"17","5":"12","6":"29"},{"1":"lnp1952","2":"1952","3":"f","4":"17","5":"34","6":"51"},{"1":"lpp1928","2":"1928","3":"f","4":"74","5":"76","6":"150"},{"1":"lso1941","2":"1941","3":"f","4":"823","5":"472","6":"1295"},{"1":"mdn1933","2":"1933","3":"f","4":"466","5":"278","6":"744"},{"1":"mgb1949","2":"1949","3":"f","4":"364","5":"405","6":"769"},{"1":"mik1922","2":"1922","3":"f","4":"357","5":"138","6":"495"},{"1":"mit1926","2":"1926","3":"f","4":"24","5":"0","6":"24"},{"1":"mjap1951","2":"1951","3":"f","4":"14","5":"39","6":"53"},{"1":"mps1935","2":"1935","3":"f","4":"39","5":"1","6":"40"},{"1":"nap1974","2":"1974","3":"f","4":"19","5":"193","6":"212"},{"1":"ndo1958","2":"1958","3":"f","4":"273","5":"273","6":"546"},{"1":"nfm1961","2":"1961","3":"f","4":"40","5":"575","6":"615"},{"1":"nis1958","2":"1958","3":"m","4":"10","5":"2","6":"12"},{"1":"njae1952","2":"1952","3":"m","4":"64","5":"82","6":"146"},{"1":"nnt1960","2":"1960","3":"f","4":"81","5":"456","6":"537"},{"1":"npo1954","2":"1954","3":"m","4":"163","5":"148","6":"311"},{"1":"npo1965","2":"1965","3":"m","4":"147","5":"426","6":"573"},{"1":"nvl1939","2":"1939","3":"f","4":"14","5":"15","6":"29"},{"1":"nvt1952","2":"1952","3":"m","4":"309","5":"337","6":"646"},{"1":"ofsh1952","2":"1952","3":"f","4":"254","5":"224","6":"478"},{"1":"opsh1935","2":"1935","3":"f","4":"343","5":"300","6":"643"},{"1":"pfp1928","2":"1928","3":"f","4":"829","5":"330","6":"1159"},{"1":"pnp1950","2":"1950","3":"m","4":"12","5":"4","6":"16"},{"1":"ppp1947","2":"1947","3":"m","4":"19","5":"4","6":"23"},{"1":"ppp1955","2":"1955","3":"m","4":"245","5":"191","6":"436"},{"1":"sek1930","2":"1930","3":"m","4":"581","5":"239","6":"820"},{"1":"svp1970","2":"1970","3":"f","4":"0","5":"51","6":"51"},{"1":"svp1975","2":"1975","3":"m","4":"23","5":"483","6":"506"},{"1":"tan1937","2":"1937","3":"f","4":"20","5":"5","6":"25"},{"1":"vap1963","2":"1963","3":"f","4":"45","5":"479","6":"524"},{"1":"vkch1966","2":"1966","3":"m","4":"193","5":"207","6":"400"},{"1":"vpch1930","2":"1930","3":"m","4":"3","5":"0","6":"3"},{"1":"vsp1996","2":"1996","3":"f","4":"2","5":"76","6":"78"},{"1":"zvk1941","2":"1941","3":"f","4":"1","5":"11","6":"12"},{"1":"afsh1958","2":"1958","3":"f","4":"0","5":"2","6":"2"},{"1":"anp1995","2":"1995","3":"f","4":"3","5":"23","6":"26"},{"1":"njar1948","2":"1948","3":"f","4":"2","5":"3","6":"5"},{"1":"vab1971","2":"1971","3":"m","4":"1","5":"5","6":"6"},{"1":"vdk1947","2":"1947","3":"m","4":"8","5":"19","6":"27"},{"1":"xxx1956","2":"1956","3":"m","4":"1","5":"0","6":"1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <div class="parallax">
 
 </div>
@@ -642,28 +657,28 @@ homo</code></pre></div>
 <h3>2.3.1 Scaterplot</h3>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(s.duration.ms, vowel.duration.ms)) +
 <span class="st">  </span><span class="kw">geom_point</span>()</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
 </div>
 <div id="scaterplot-" class="section level3">
 <h3>2.3.2 Scaterplot: цвет</h3>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(s.duration.ms, vowel.duration.ms,
                         <span class="dt">color =</span> orientation)) +
 <span class="st">  </span><span class="kw">geom_point</span>()</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
 </div>
 <div id="scaterplot-" class="section level3">
 <h3>2.3.3 Scaterplot: форма</h3>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(s.duration.ms, vowel.duration.ms,
                         <span class="dt">shape =</span> orientation)) +
 <span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">color =</span> <span class="st">&quot;darkgreen&quot;</span>)</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 </div>
 <div id="scaterplot-" class="section level3">
 <h3>2.3.4 Scaterplot: размер</h3>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(s.duration.ms, vowel.duration.ms,
                         <span class="dt">size =</span> age)) +
 <span class="st">  </span><span class="kw">geom_point</span>()</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
 </div>
 <div id="scaterplot-" class="section level3">
 <h3>2.3.5 Scaterplot: текст</h3>
@@ -671,11 +686,11 @@ homo</code></pre></div>
 <span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(s.duration.ms, vowel.duration.ms,
                         <span class="dt">label =</span> orientation, <span class="dt">fill =</span> orientation)) +
 <span class="st">  </span><span class="kw">geom_label</span>()</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(s.duration.ms, vowel.duration.ms,
                         <span class="dt">label =</span> orientation, <span class="dt">fill =</span> orientation)) +
 <span class="st">  </span><span class="kw">geom_text</span>()</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-18-2.png" width="672" /></p>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-19-2.png" width="672" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#  Но для дальнейшей лекции имеет смысл вернуть обратно.</span>
 <span class="kw">levels</span>(homo$orientation) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;homo&quot;</span>, <span class="st">&quot;hetero&quot;</span>)</code></pre></div>
 </div>
@@ -686,7 +701,7 @@ homo</code></pre></div>
 <span class="st">  </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;length of [s] vs. length of vowels&quot;</span>,
        <span class="dt">subtitle =</span> <span class="st">&quot;based on 14 speakers of Cantonese&quot;</span>,
        <span class="dt">caption =</span> <span class="st">&quot;data from [Chi kuk 2007]&quot;</span>)</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
 </div>
 <div id="scaterplot-" class="section level3">
 <h3>2.3.7 Scaterplot: оси</h3>
@@ -694,14 +709,14 @@ homo</code></pre></div>
 <span class="st">  </span><span class="kw">geom_point</span>()+
 <span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;duration of [s] in ms&quot;</span>)+
 <span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;vowel duration in ms&quot;</span>)</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
 </div>
 <div id="scaterplot-rug" class="section level3">
 <h3>2.3.8 Scaterplot: rug</h3>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(s.duration.ms, vowel.duration.ms, <span class="dt">color =</span> orientation)) +
 <span class="st">  </span><span class="kw">geom_point</span>() +
 <span class="st">  </span><span class="kw">geom_rug</span>()</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
 </div>
 <div id="scaterplot-" class="section level3">
 <h3>2.3.9 Scaterplot: линии</h3>
@@ -709,17 +724,17 @@ homo</code></pre></div>
 <span class="st">  </span><span class="kw">geom_point</span>() +
 <span class="st">  </span><span class="kw">geom_hline</span>(<span class="dt">yintercept =</span> <span class="kw">mean</span>(homo$vowel.duration.ms))+
 <span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="dv">60</span>)</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(s.duration.ms, vowel.duration.ms)) +
 <span class="st">  </span><span class="kw">geom_point</span>() +
 <span class="st">  </span><span class="kw">geom_hline</span>(<span class="dt">yintercept =</span> <span class="dv">120</span>, <span class="dt">linetype =</span> <span class="dv">2</span>)+
 <span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="dv">60</span>, <span class="dt">size =</span> <span class="dv">5</span>)</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(s.duration.ms, vowel.duration.ms)) +
 <span class="st">  </span><span class="kw">geom_point</span>() +
 <span class="st">  </span><span class="kw">geom_hline</span>(<span class="dt">yintercept =</span> <span class="dv">120</span>, <span class="dt">linetype =</span> <span class="dv">4</span>)+
 <span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="dv">60</span>, <span class="dt">color =</span> <span class="st">&quot;blue&quot;</span>)</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
 </div>
 <div id="scaterplot--" class="section level3">
 <h3>2.3.10 Scaterplot: дополнительная аннотация</h3>
@@ -730,7 +745,7 @@ homo</code></pre></div>
              <span class="dt">ymin =</span> <span class="dv">117</span>, <span class="dt">ymax =</span> <span class="dv">122</span>, <span class="dt">fill =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">alpha =</span> <span class="fl">0.2</span>) +<span class="st"> </span>
 <span class="st">  </span><span class="kw">annotate</span>(<span class="dt">geom =</span> <span class="st">&quot;text&quot;</span>, <span class="dt">x =</span> <span class="dv">78</span>, <span class="dt">y =</span> <span class="dv">125</span>,
              <span class="dt">label =</span> <span class="st">&quot;Who is that?</span><span class="ch">\n</span><span class="st"> Outlier?&quot;</span>)</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
 <div class="parallax">
 
 </div>
@@ -760,20 +775,20 @@ homo</code></pre></div>
 <h4>2.4.1.1 Barplots: неаггрегированые данные</h4>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(orientation)) +
 <span class="st">  </span><span class="kw">geom_bar</span>()</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
 </div>
 <div id="barplots--" class="section level4">
 <h4>2.4.1.2 Barplots: аггрегированые данные</h4>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(speaker, age)) +
 <span class="st">  </span><span class="kw">geom_col</span>()</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
 </div>
 </div>
 <div id="barplots-" class="section level3">
 <h3>2.4.2 Barplots: цвет</h3>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(speaker, age, <span class="dt">fill =</span> orientation)) +
 <span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>)</code></pre></div>
-<img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-30-1.png" width="672" />
+<img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-31-1.png" width="672" />
 <div class="parallax">
 
 </div>
@@ -782,28 +797,28 @@ homo</code></pre></div>
 <h3>2.5.1 Ящики с усами (boxplot)</h3>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(orientation, s.duration.ms)) +
 <span class="st">  </span><span class="kw">geom_boxplot</span>()</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
 </div>
 <div id="---" class="section level3">
 <h3>2.5.2 Ящики с усами: точки</h3>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(orientation, s.duration.ms)) +
 <span class="st">  </span><span class="kw">geom_boxplot</span>()+
 <span class="st">  </span><span class="kw">geom_point</span>()</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
 </div>
 <div id="---jitter" class="section level3">
 <h3>2.5.3 Ящики с усами: jitter</h3>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(orientation, s.duration.ms)) +
 <span class="st">  </span><span class="kw">geom_boxplot</span>() +
 <span class="st">  </span><span class="kw">geom_jitter</span>(<span class="dt">width =</span> <span class="fl">0.5</span>)</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-34-1.png" width="672" /></p>
 </div>
 <div id="violinplot" class="section level3">
 <h3>2.5.4 Violinplot</h3>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(orientation, s.duration.ms)) +
 <span class="st">  </span><span class="kw">geom_violin</span>() +
 <span class="st">  </span><span class="kw">geom_jitter</span>()</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-34-1.png" width="672" /></p>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
 <div class="parallax">
 
 </div>
@@ -812,7 +827,7 @@ homo</code></pre></div>
 <h3>2.6.1 Гистограмма</h3>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(s.duration.ms)) +
 <span class="st">  </span><span class="kw">geom_histogram</span>()</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-36-1.png" width="672" /></p>
 <p>Сколько нужно ячеек?</p>
 <ul>
 <li>[Sturgers 1926] <em>nclass.Sturges(adyghe$F1)</em></li>
@@ -821,13 +836,13 @@ homo</code></pre></div>
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(s.duration.ms)) +
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="kw">nclass.FD</span>(homo$s.duration.ms))</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-36-1.png" width="672" /></p>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-37-1.png" width="672" /></p>
 </div>
 <div id="-" class="section level3">
 <h3>2.6.2 Гистограмма: цвет</h3>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(s.duration.ms)) +
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">fill =</span> <span class="st">&quot;lightblue&quot;</span>)</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-37-1.png" width="672" /></p>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-38-1.png" width="672" /></p>
 <div class="parallax">
 
 </div>
@@ -836,32 +851,32 @@ homo</code></pre></div>
 <h3>2.7.1 График плотности</h3>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(s.duration.ms)) +
 <span class="st">  </span><span class="kw">geom_density</span>()</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-38-1.png" width="672" /></p>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
 </div>
 <div id="--" class="section level3">
 <h3>2.7.2 График плотности: цвет</h3>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(s.duration.ms)) +
 <span class="st">  </span><span class="kw">geom_density</span>(<span class="dt">fill =</span> <span class="st">&quot;lightblue&quot;</span>)</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
 </div>
 <div id="---" class="section level3">
 <h3>2.7.3 График плотности: несколько графиков</h3>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(s.duration.ms, <span class="dt">fill =</span> orientation)) +
 <span class="st">  </span><span class="kw">geom_density</span>()</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-41-1.png" width="672" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(s.duration.ms, <span class="dt">fill =</span> orientation)) +
 <span class="st">  </span><span class="kw">geom_density</span>(<span class="dt">alpha =</span> <span class="fl">0.2</span>)</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-41-1.png" width="672" /></p>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-42-1.png" width="672" /></p>
 </div>
 <div id="joy-plot" class="section level3">
 <h3>2.7.4 Joy plot</h3>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggjoy)
 <span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(s.duration.ms, orientation)) +
 <span class="st">  </span><span class="kw">geom_joy</span>()</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-42-1.png" width="672" /></p>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-43-1.png" width="672" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(s.duration.ms, orientation, <span class="dt">fill =</span> orientation)) +
 <span class="st">  </span><span class="kw">geom_joy</span>()</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-43-1.png" width="672" /></p>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-44-1.png" width="672" /></p>
 <div class="parallax">
 
 </div>
@@ -871,15 +886,15 @@ homo</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(speaker, s.duration.ms))+
 <span class="st">  </span><span class="kw">geom_point</span>() +<span class="st"> </span>
 <span class="st">  </span><span class="kw">facet_wrap</span>(~orientation)</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-44-1.png" width="672" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(speaker, s.duration.ms))+
-<span class="st">  </span><span class="kw">geom_point</span>() +<span class="st"> </span>
-<span class="st">  </span><span class="kw">facet_wrap</span>(~orientation, <span class="dt">scales =</span> <span class="st">&quot;free&quot;</span>)</code></pre></div>
 <p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-45-1.png" width="672" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(speaker, s.duration.ms))+
 <span class="st">  </span><span class="kw">geom_point</span>() +<span class="st"> </span>
-<span class="st">  </span><span class="kw">facet_wrap</span>(~orientation, <span class="dt">scales =</span> <span class="st">&quot;free_x&quot;</span>)</code></pre></div>
+<span class="st">  </span><span class="kw">facet_wrap</span>(~orientation, <span class="dt">scales =</span> <span class="st">&quot;free&quot;</span>)</code></pre></div>
 <p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-46-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(speaker, s.duration.ms))+
+<span class="st">  </span><span class="kw">geom_point</span>() +<span class="st"> </span>
+<span class="st">  </span><span class="kw">facet_wrap</span>(~orientation, <span class="dt">scales =</span> <span class="st">&quot;free_x&quot;</span>)</code></pre></div>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-47-1.png" width="672" /></p>
 </div>
 <div id="facets-facet_grid" class="section level3">
 <h3>2.8.2 Facets: <code>facet_grid()</code></h3>
@@ -887,22 +902,22 @@ homo</code></pre></div>
 <span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(speaker, s.duration.ms))+
 <span class="st">  </span><span class="kw">geom_point</span>() +<span class="st"> </span>
 <span class="st">  </span><span class="kw">facet_wrap</span>(older_then_28~orientation, <span class="dt">scales =</span> <span class="st">&quot;free_x&quot;</span>)</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-47-1.png" width="672" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(speaker, s.duration.ms))+
-<span class="st">  </span><span class="kw">geom_point</span>() +<span class="st"> </span>
-<span class="st">  </span><span class="kw">facet_grid</span>(older_then_28~orientation, <span class="dt">scales =</span> <span class="st">&quot;free_x&quot;</span>)</code></pre></div>
 <p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-48-1.png" width="672" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(speaker, s.duration.ms))+
 <span class="st">  </span><span class="kw">geom_point</span>() +<span class="st"> </span>
-<span class="st">  </span><span class="kw">facet_grid</span>(older_then_28~orientation, <span class="dt">scales =</span> <span class="st">&quot;free_x&quot;</span>, <span class="dt">margins =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<span class="st">  </span><span class="kw">facet_grid</span>(older_then_28~orientation, <span class="dt">scales =</span> <span class="st">&quot;free_x&quot;</span>)</code></pre></div>
 <p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-49-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(speaker, s.duration.ms))+
+<span class="st">  </span><span class="kw">geom_point</span>() +<span class="st"> </span>
+<span class="st">  </span><span class="kw">facet_grid</span>(older_then_28~orientation, <span class="dt">scales =</span> <span class="st">&quot;free_x&quot;</span>, <span class="dt">margins =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-50-1.png" width="672" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> homo, <span class="kw">aes</span>(speaker, s.duration.ms))+
 <span class="st">  </span><span class="co"># Можно добавить geom без групирующей переменной!</span>
 <span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">data =</span> homo[,-<span class="dv">9</span>], <span class="kw">aes</span>(speaker, s.duration.ms), <span class="dt">color =</span> <span class="st">&quot;grey&quot;</span>) +<span class="st"> </span>
 <span class="st">  </span><span class="kw">geom_point</span>() +<span class="st"> </span>
 <span class="st">  </span><span class="kw">facet_wrap</span>(~orientation)+
 <span class="st">  </span><span class="kw">theme_bw</span>()</code></pre></div>
-<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-50-1.png" width="672" /></p>
+<p><img src="1_R_basics_visualisation_files/figure-html/unnamed-chunk-51-1.png" width="672" /></p>
 <div class="parallax">
 
 </div>
