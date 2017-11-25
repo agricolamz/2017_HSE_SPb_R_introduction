@@ -143,6 +143,7 @@ tail(df)
 summary(df)
 df[1,]
 df[,2]
+df$name
 ```
 
 

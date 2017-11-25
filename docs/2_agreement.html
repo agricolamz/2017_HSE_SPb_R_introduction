@@ -433,7 +433,7 @@ div.tocify {
 ##   %-agree = 74.5</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">round</span>(<span class="fl">74.5</span>*<span class="dv">106</span>/<span class="dv">100</span>) <span class="co"># количество случаев полного согласия</span></code></pre></div>
 <pre><code>## [1] 79</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">agree</span>(sonet[,-<span class="kw">c</span>(<span class="dv">1</span>)])</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">agree</span>(sonet[,-<span class="dv">1</span>])</code></pre></div>
 <pre><code>##  Percentage agreement (Tolerance=0)
 ## 
 ##  Subjects = 14 
@@ -479,7 +479,6 @@ div.tocify {
 <li><span class="math inline">\(p_o = \frac{a+d}{a+b+c+d}\)</span></li>
 <li><span class="math inline">\(p_e = \frac{(a+b)\times(a+c) + (d+b)\times(d+c)}{(a+b+c+d)^2}\)</span></li>
 </ul>
-
 <p>Выберем двух спикиров из наших данных:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">zilo_classes_2s &lt;-<span class="st"> </span>zilo_classes[,<span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">14</span>)]
 <span class="kw">agree</span>(zilo_classes_2s)</code></pre></div>
@@ -523,6 +522,9 @@ coehns_kappa</code></pre></div>
 <li>0.81–1 almost perfect agreement</li>
 </ul>
 <p>Каппа Коэна — не единственная мера согласия между двумя оценщиками. Существуют работы, в которых каппу Коэна ругают.</p>
+<blockquote>
+<p><img src="think.png" /> (3) Посчитайте каппу Коэна для спикеров в 4 и 120 столбцах данных про глаголы.<br> <img src="think2.png" /> (4) Посчитайте каппу Коэна для переводов А. Велигжанина и М. Чайковского.</p>
+</blockquote>
 <div class="parallax">
 
 </div>
@@ -542,6 +544,12 @@ coehns_kappa</code></pre></div>
   </script>
 </div>
 <p>Бывает еще ранговая корреляция Спирмана (<code>cor(..., method = &quot;spearman&quot;)</code>).</p>
+<blockquote>
+<p><img src="think.png" /> (5) Какой коэфициент корреляции Кендала между спикерами в 4 и 120 столбцах данных про глаголы.</p>
+</blockquote>
+<div class="parallax">
+
+</div>
 </div>
 <div id="-" class="section level3">
 <h3>5. Каппа Фляйса</h3>
@@ -574,6 +582,9 @@ coehns_kappa</code></pre></div>
 ## 
 ##         z = 452 
 ##   p-value = 0</code></pre>
+<blockquote>
+<p><img src="think2.png" /> (6) Посчитайте каппу Фляйса для сонетских данных.<br></p>
+</blockquote>
 <div class="parallax">
 
 </div>
