@@ -95,31 +95,15 @@ head(marginal_verbs)
 #### 1.4 Переводы 57 сонета У. Шекспира
 В 
 
-<div class="parallax"></div>
-
-### 2. Преобразования данных
-Все функции пакета `irr` не настроены на формат tidy data, и требует следующего формата:
-
-* каждый столбец — это суждения одного оценщика
-* каждая строчка — это то, что оценивают 
-
 ```{r}
-zilo_classes %>% 
-  select(s_id, stimulus, translation_ru, stimulus_source, class) %>% 
-  spread(key = s_id, value = class) ->
-  zilo_classes_short
-head(zilo_classes_short)
-
-marginal_verbs %>% 
-  select(SubjectCode, Stimulus, WordType, Prefix, GivenScore) %>% 
-  spread(key = SubjectCode, value = GivenScore) ->
-  marginal_verbs_short
-head(marginal_verbs_short)
+sonet <- read.csv("https://goo.gl/cqPDkq")
+head(sonet)
 ```
 
 <div class="parallax"></div>
 
-### 3. Процент полного согласия
+
+### 2. Процент полного согласия
 Процент полного согласия — это процент случаев, когда все оценщики идентичны в своих суждениях.
 
 ```{r}
