@@ -1,6 +1,6 @@
 ---
 title: "2. Меры согласия"
-author: "Г. Мороз <br> Презентация доступна по ссылке: https://goo.gl/mdkzaT"
+author: "Г. Мороз <br> Презентация доступна по ссылке: goo.gl/mdkzaT"
 ---
 
 ```{r setup, include=FALSE}
@@ -50,7 +50,7 @@ library(irr)
 В зиловском диалекте андийского языка существует два класса для неодушевленных предметов. В 2017 году был проведен эксперимент, чтобы проверить, наличие вариативности в отнесению к тому или иному классу заимствованой и исконной лексики.
 
 ```{r}
-zilo_classes <- read_csv("https://goo.gl/miGq7Q")
+zilo_classes <- read.csv("https://goo.gl/MPquvV")
 head(zilo_classes)
 ```
 
@@ -73,7 +73,7 @@ head(zilo_classes)
 * искусственные слова (_ономить_, _укампить_)
 
 ```{r}
-marginal_verbs <- read_csv("https://goo.gl/6Phok3")
+marginal_verbs <- read_csv("https://goo.gl/Pq1S8V")
 head(marginal_verbs)
 ```
 
